@@ -1,22 +1,19 @@
+require("dotenv").config();
+const PORT = process.env.PORT || 5000;
 const express = require("express");
 const app = express();
+const middlewareLogRequest = require("./middleware/log");
+const usersRoutes = require("./routes/users");
+const projectsRoutes = require("./routes/projects");
+const loginRoutes = require("./routes/login");
 
-// app.use("/", (req, res, next) => {
-//   res.send("Hello World!!");
-//   next();
-// });
+app.use(express.json());
+app.use(middlewareLogRequest);
 
-app.get("/", (req, res) => {
-  res.json({
-    name: "Zidane Abbas",
-    password: "secretpassword",
-  });
-});
+app.use("/api", usersRoutes);
+app.use("/api", projectsRoutes);
+app.use("/api", loginRoutes);
 
-app.post("/", (req, res) => {
-  res.send("Hello POST Method!");
-});
-
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

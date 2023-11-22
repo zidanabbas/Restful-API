@@ -13,7 +13,7 @@ Request Body :
 ```json
 {
   "title": "myProjects",
-  "detail": "ini adalah project portofolio pribadi sayya",
+  "detail": "ini adalah project portofolio pribadi saya",
   "createdAt": "2022-10-2",
   "image": "image.png",
   "link": "https://zidanabbas.vercel.app/"
@@ -30,7 +30,7 @@ Response Body Success :
     "detail": "ini adalah project portofolio pribadi saya",
     "createdAt": "2022-10-2",
     "image": "image.png",
-    "link": "zidanabbas.vercel.app"
+    "link": "https://zidanabbas.vercel.app/"
   }
 }
 ```
@@ -47,9 +47,38 @@ Headers :
 
 Request Body :
 
+```json
+{
+  "title": "new myProjects",
+  "detail": "new ini adalah project portofolio pribadi saya",
+  "createdAt": "2022-10-2",
+  "image": "new Image.png",
+  "link": "https://zidanabbas.vercel.app/"
+}
+```
+
 Response Body Success :
 
+```json
+{
+  "data": {
+    "id": "1",
+    "title": "new myProjects",
+    "detail": "new ini adalah project portofolio pribadi saya",
+    "createdAt": "2022-10-2",
+    "image": "new Image.png",
+    "link": "https://zidanabbas.vercel.app/"
+  }
+}
+```
+
 Response Body Error :
+
+```json
+{
+  "errors": "Update projects error"
+}
+```
 
 ## Get Project API
 
@@ -61,9 +90,38 @@ Headers :
 
 Request Body :
 
+```json
+{
+  "title": "my Projects",
+  "detail": "ini adalah portofolio pribadi saya",
+  "createdAt": "2022-10-2",
+  "image": "image.png",
+  "link": "https://zidanabbas.vercel.app/"
+}
+```
+
 Response Body Success :
 
+```json
+{
+  "data": {
+    "id": "1",
+    "title": "my Projects",
+    "detail": "ini adalah portofolio pribadi saya",
+    "createdAt": "2022-10-2",
+    "image": "image.png",
+    "link": "https://zidanabbas.vercel.app/"
+  }
+}
+```
+
 Response Body Error :
+
+```json
+{
+  "errors": "Unauthorized"
+}
+```
 
 ## Search Project API
 
@@ -91,4 +149,14 @@ Request Body :
 
 Response Body Success :
 
+```json
+{
+  "data"
+}
+```
+
 Response Body Error :
+
+```
+
+```
